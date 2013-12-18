@@ -21,15 +21,10 @@ P = zeros(2,2,2,2,2,2,inv_level,T);
 
 %demand
 %TODO insert real demand figures
-Demand = ones(1,T)*2000;
+Demand = ones(1,T)*3000;
 %fluctuation range and prob
 D_fluct = 0.1;
 D_prob = [0, 1, 0];
-
-%competitor response
-%in the future, revise to be based on price
-b_prob = [0.8 0.1 0.1]; %unlikely to open
-c_prob = [0.8 0.1 0.1]; %unlikely to open
 
 %supply
 %%Supply curve - assume it doesn't change over time
@@ -100,6 +95,10 @@ TotalIncentiveCurve = [incentiveCurveA(1:2, :);
                         incentiveCurveC(1:2, :)];
 
 
+%competitor response
+%in the future, revise to be based on price
+b_prob = [0.8 0.1 0.1]; %unlikely to open
+c_prob = [0.8 0.1 0.1]; %unlikely to open
 
 %solve terminal period
 V(:,:,:,:,:,:,:,T+1) = 0;

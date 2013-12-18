@@ -81,5 +81,5 @@ TotalIncentiveCurve = [incentiveCurveA(1:2, :);
                         incentiveCurveB(1:2, :);
                         incentiveCurveC(1:2, :)];
                     
-MinesOpened = [1 1 0 0 0 0];
-[new_invs, prices, Arewards] = findPrice(T, MinesOpened, 0, 1, 0, 0, 0, D_prob, D_fluct, 1000, SupplyCurve(:,:,1), TotalIncentiveCurve);
+MinesOpened = [0 0 0 0 0 0];
+[new_invs, prices, Arewards] = findPrice(T, MinesOpened, 0, 1, 0, 0, 0, D_prob, D_fluct, Demand(1), SupplyCurve(:,:,1), TotalIncentiveCurve);
